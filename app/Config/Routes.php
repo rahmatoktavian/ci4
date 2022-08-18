@@ -37,14 +37,30 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
-//->get : tipe request get
-//post_request : url yang bisa diakses (tampil di browser)
-//Form::post_request : nama controller::nama function
+//param get & post
 $routes->get('/post_request', 'Form::post_request');
-
 $routes->post('/post_response', 'Form::post_response');
 $routes->get('/get_request', 'Form::get_request');
 $routes->get('/get_response/(:segment)', 'Form::get_response/$1');
+//end param get & post
+
+//crud single table
+$routes->get('/kategori', 'Kategori::list');
+$routes->get('/kategori/insert', 'Kategori::insert');
+$routes->post('/kategori/insert', 'Kategori::insert_save');
+$routes->get('/kategori/(:segment)', 'Kategori::update/$1');
+$routes->post('/kategori/(:segment)', 'Kategori::update_save/$1');
+$routes->get('/kategori/delete/(:segment)', 'Kategori::delete/$1');
+//end crud single table
+
+//crud 1-Many table
+$routes->get('/buku', 'Buku::list');
+$routes->get('/buku/insert', 'Buku::insert');
+$routes->post('/buku/insert', 'Buku::insert_save');
+$routes->get('/buku/(:segment)', 'Buku::update/$1');
+$routes->post('/buku/(:segment)', 'Buku::update_save/$1');
+$routes->get('/buku/delete/(:segment)', 'Buku::delete/$1');
+//end crud 1-Many table
 
 /*
  * --------------------------------------------------------------------
