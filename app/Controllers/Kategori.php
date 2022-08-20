@@ -15,7 +15,7 @@ class Kategori extends BaseController
     public function list()
     {
         //select data from table kategori
-        $list = $this->KategoriModel->findAll();
+        $list = $this->KategoriModel->select('id, nama')->orderBy('nama')->findAll();
 
         $output = [
             'list' => $list,
@@ -43,11 +43,13 @@ class Kategori extends BaseController
 
     public function update($id)
     {
+        //select data kategori yang dipilih (filter by id)
         $data =  $this->KategoriModel->where('id', $id)->first();
-
+        
         $output = [
             'data' => $data,
         ];
+
         return view('kategori_update', $output);
     }
 
