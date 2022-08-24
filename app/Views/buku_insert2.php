@@ -1,4 +1,6 @@
-<form method="post" action="<?= site_url('buku/insert') ?>">
+<?php $validation = session()->getFlashdata('validation') ?>
+
+<form method="post" action="<?= site_url('buku2/insert') ?>">
   <?= csrf_field() ?>
   <table>
     <tr>
@@ -15,6 +17,7 @@
       <td>Judul</td>
       <td>
         <input type="text" name="judul" value="" />
+        <small><?= $validation ? $validation->showError('judul') : '' ?></small>
       </td>
     </tr>
     <tr>

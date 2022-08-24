@@ -5,5 +5,5 @@ use CodeIgniter\Model;
 class BukuModel extends Model
 {
     protected $table = 'buku';
-    protected $allowedFields = ['kategori_id', 'judul'];
+    protected $allowedFields = ['kategori_id', 'judul', 'cover'];
 }

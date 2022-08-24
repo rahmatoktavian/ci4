@@ -2,9 +2,9 @@
   <?= csrf_field() ?>
   <table>
     <tr>
-      <td width="20%">Nama</td>
+      <td>Nama</td>
       <td>
-        <input class="form-control" type="text" name="nama" value="<?= $data['nama'] ?>" />
+        <input type="text" name="nama" value="<?= $data['nama'] ?>" />
       </td>
     </tr>
     <tr>

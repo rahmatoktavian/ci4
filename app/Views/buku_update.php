@@ -2,7 +2,7 @@
   <?= csrf_field() ?>
   <table>
     <tr>
-      <td width="20%">Kategori</td>
+      <td>Kategori</td>
       <td>
         <select name="kategori_id">
           <?php foreach($data_kategori as $kategori):?>
@@ -18,7 +18,7 @@
     <tr>
       <td>Judul</td>
       <td>
-        <input class="form-control" type="text" name="judul" value="<?= $data['judul'] ?>" />
+        <input type="text" name="judul" value="<?= $data['judul'] ?>" />
       </td>
     </tr>
     <tr>
