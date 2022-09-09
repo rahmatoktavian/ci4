@@ -24,3 +24,6 @@
       <?php endforeach ?>
     </tbody>
 </table>
+
+<br />
+<a href="<?= site_url('buku_export') ?>">Export Excel</a>

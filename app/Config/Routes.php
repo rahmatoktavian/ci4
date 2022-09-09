@@ -70,6 +70,10 @@ $routes->get('/buku2/upload/(:segment)', 'Buku2::upload/$1');
 $routes->post('/buku2/upload/(:segment)', 'Buku2::upload_save/$1');
 //end crud 1-Many table
 
+//export
+$routes->get('/buku_export', 'BukuExport::export');
+//end crud 1-Many table
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
