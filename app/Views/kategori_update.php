@@ -11,7 +11,7 @@
       <td>&nbsp;</td>
       <td>
         <button type="submit">Save</button>
-        <a href="<?= site_url('kategori/delete/'.$data['id']) ?>" >Delete</a>
+        <a href="<?= site_url('kategori/delete/'.$data['id']) ?>" onclick="return confirm('Yakin bro?')">Delete</a>
       </td>
     </tr>
   </table>
