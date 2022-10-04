@@ -9,6 +9,9 @@ use App\Models\KategoriModel;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
+//memanggil package pdf
+use Dompdf\Dompdf;
+
 class BukuExport extends BaseController
 {
     public function __construct()
@@ -18,7 +21,7 @@ class BukuExport extends BaseController
         $this->KategoriModel = new KategoriModel();
     }
 
-    function export()
+    function export_xls()
     {
         //select data from table buku
         $list = $this->BukuModel->select('buku.id, buku.judul, kategori.nama AS kategori_nama')->join('kategori','buku.kategori_id = kategori.id')->orderBy('kategori.nama, judul')->findAll();
@@ -49,5 +52,32 @@ class BukuExport extends BaseController
         header('Content-Disposition: attachment; filename="' . urlencode($fileName) . '"');
         $writer = new Xlsx($spreadsheet);
         $writer->save('php://output');
+    }
+
+    function export_pdf()
+    {
+        //select data from table buku
+        $list = $this->BukuModel->select('buku.id, buku.judul, kategori.nama AS kategori_nama')->join('kategori','buku.kategori_id = kategori.id')->orderBy('kategori.nama, judul')->findAll();
+
+        //filename
+        $fileName = 'buku_export';
+
+        // instantiate and use the dompdf class
+        $dompdf = new Dompdf();
+
+        // load HTML content
+        $output = [
+            'list' => $list,
+        ];
+        $dompdf->loadHtml(view('buku_export_pdf', $output));
+
+        // (optional) setup the paper size and orientation
+        $dompdf->setPaper('A4', 'landscape');
+
+        // render html as PDF
+        $dompdf->render();
+
+        // output the generated pdf
+        $dompdf->stream($fileName);
     }
 }

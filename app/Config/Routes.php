@@ -71,7 +71,8 @@ $routes->post('/buku2/upload/(:segment)', 'Buku2::upload_save/$1');
 //end crud 1-Many table
 
 //export
-$routes->get('/buku_export', 'BukuExport::export');
+$routes->get('/buku_export_xls', 'BukuExport::export_xls');
+$routes->get('/buku_export_pdf', 'BukuExport::export_pdf');
 //end crud 1-Many table
 
 /*
