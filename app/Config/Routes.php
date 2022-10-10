@@ -75,6 +75,7 @@ $routes->get('/buku_export_xls', 'BukuExport::export_xls');
 $routes->get('/buku_export_pdf', 'BukuExport::export_pdf');
 //end crud 1-Many table
 
+$routes->get('/chart', 'Chart::list');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

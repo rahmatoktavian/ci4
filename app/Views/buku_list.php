@@ -6,7 +6,7 @@
       <tr>
         <th>No</th>
         <th>Kategori</th>
-        <th>Nama</th>
+        <th>Judul</th>
         <th>Action</th>
       </tr>
     </thead>
