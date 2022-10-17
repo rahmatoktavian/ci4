@@ -62,6 +62,13 @@ $routes->post('/buku/(:segment)', 'Buku::update_save/$1');
 $routes->get('/buku/delete/(:segment)', 'Buku::delete/$1');
 //end crud 1-Many table
 
+//crud Many-Many table
+$routes->get('/peminjaman', 'Peminjaman::list');
+$routes->get('/peminjaman_buku/(:segment)', 'PeminjamanBuku::list/$1');
+$routes->get('/peminjaman_buku/insert/(:segment)', 'PeminjamanBuku::insert/$1');
+$routes->post('/peminjaman_buku/insert/(:segment)', 'PeminjamanBuku::insert_save/$1');
+//end crud Many-Many table
+
 //validation & upload
 $routes->get('/buku2', 'Buku2::list');
 $routes->get('/buku2/insert', 'Buku2::insert');
