@@ -6,7 +6,7 @@ CREATE TABLE peminjaman (
 
 INSERT INTO peminjaman (id, nama, tanggal) VALUES
 (1, 'Loki', '2022-10-01'),
-(2, 'Deadpool', '2022-10-05');
+(2, 'Deadpool', '2022-10-05'),
 (3, 'Stephen Strange', '2022-10-07');
 
 ALTER TABLE `peminjaman` ADD PRIMARY KEY (`id`);
