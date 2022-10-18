@@ -52,10 +52,10 @@ class PeminjamanBuku extends BaseController
     {
         $buku_id = $this->request->getVar('buku_id');
 
-        $db = \Config\Database::connect();
-        $db->transStart();
+        // $db = \Config\Database::connect();
+        // $db->transStart();
 
-        //insert peminjaman
+        //insert peminjaman buku
         $this->PeminjamanBukuModel->insert([
             'peminjaman_id' => $peminjaman_id,
             'buku_id' => $buku_id,
@@ -67,10 +67,10 @@ class PeminjamanBuku extends BaseController
         
         //update stok buku
         $this->BukuModel->update($buku_id, [
-            'stok' => $stok_baru,
+            'stox' => $stok_baru,
         ]);
         
-        $db->transComplete();
+        // $db->transComplete();
 
         return redirect()->to('peminjaman_buku/'.$peminjaman_id);
     }
