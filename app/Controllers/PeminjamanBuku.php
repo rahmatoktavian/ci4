@@ -65,6 +65,7 @@ class PeminjamanBuku extends BaseController
         $buku = $this->BukuModel->where('id', $buku_id)->first();
         $stok_baru = $buku['stok'] - 1;
         
+        //update stok buku
         $this->BukuModel->update($buku_id, [
             'stok' => $stok_baru,
         ]);
