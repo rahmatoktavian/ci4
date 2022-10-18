@@ -52,8 +52,8 @@ class PeminjamanBuku extends BaseController
     {
         $buku_id = $this->request->getVar('buku_id');
 
-        // $db = \Config\Database::connect();
-        // $db->transStart();
+        $db = \Config\Database::connect();
+        $db->transStart();
 
         //insert peminjaman buku
         $this->PeminjamanBukuModel->insert([
@@ -70,7 +70,7 @@ class PeminjamanBuku extends BaseController
             'stox' => $stok_baru,
         ]);
         
-        // $db->transComplete();
+        $db->transComplete();
 
         return redirect()->to('peminjaman_buku/'.$peminjaman_id);
     }
