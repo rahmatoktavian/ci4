@@ -67,7 +67,7 @@ class PeminjamanBuku extends BaseController
         
         //update stok buku
         $this->BukuModel->update($buku_id, [
-            'stox' => $stok_baru,
+            'stok' => $stok_baru,
         ]);
         
         $db->transComplete();
