@@ -36,8 +36,8 @@ class BukuExport extends BaseController
         $sheet = $spreadsheet->getActiveSheet();
         //(A1 : lokasi line & column excel, No : display data)
         $sheet->setCellValue('A1', 'No')->getColumnDimension('A')->setAutoSize(true);
-        $sheet->setCellValue('B1', 'Judul')->getColumnDimension('B')->setAutoSize(true);
-        $sheet->setCellValue('C1', 'Kategori')->getColumnDimension('C')->setAutoSize(true);
+        $sheet->setCellValue('B1', 'Kategori')->getColumnDimension('B')->setAutoSize(true);
+        $sheet->setCellValue('C1', 'Judul')->getColumnDimension('C')->setAutoSize(true);
 
         //body
         $line = 2;

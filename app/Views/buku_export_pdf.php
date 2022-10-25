@@ -3,7 +3,7 @@
       <tr>
         <th>No</th>
         <th>Kategori</th>
-        <th>Nama</th>
+        <th>Judul</th>
       </tr>
     </thead>
     <tbody>
