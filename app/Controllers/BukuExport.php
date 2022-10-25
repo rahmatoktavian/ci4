@@ -72,7 +72,7 @@ class BukuExport extends BaseController
         $dompdf->loadHtml(view('buku_export_pdf', $output));
 
         // (optional) setup the paper size and orientation
-        $dompdf->setPaper('A4', 'landscape');
+        $dompdf->setPaper('A4', 'potrait');
 
         // render html as PDF
         $dompdf->render();
