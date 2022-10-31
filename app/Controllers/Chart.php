@@ -12,7 +12,7 @@ class Chart extends BaseController
         $this->BukuModel = new BukuModel();
     }
 
-    public function list()
+    public function pie()
     {
         //select data from table buku
         $list = $this->BukuModel->select('judul, stok')->orderBy('judul')->findAll();
@@ -21,6 +21,6 @@ class Chart extends BaseController
             'list' => $list,
         ];
 
-        return view('chart', $output);
+        return view('chart_pie', $output);
     }
 }
