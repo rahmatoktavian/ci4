@@ -17,7 +17,7 @@ class Buku extends BaseController
     public function list()
     {
         //select data from table buku
-        $list = $this->BukuModel->select('buku.id, buku.judul, kategori.nama AS kategori_nama')->join('kategori','buku.kategori_id = kategori.id')->orderBy('kategori.nama, judul')->findAll();
+        $list = $this->BukuModel->select('buku.id, buku.judul, kategori.nama AS kategori_nama, stok')->join('kategori','buku.kategori_id = kategori.id')->orderBy('kategori.nama, judul')->findAll();
 
         $output = [
             'list' => $list,

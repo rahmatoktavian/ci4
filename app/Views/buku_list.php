@@ -7,6 +7,7 @@
         <th>No</th>
         <th>Kategori</th>
         <th>Judul</th>
+        <th>Stok</th>
         <th>Action</th>
       </tr>
     </thead>
@@ -17,6 +18,7 @@
           <td><?= $num++; ?></td>
           <td><?= $row['kategori_nama']; ?></td>
           <td><?= $row['judul']; ?></td>
+          <td><?= $row['stok']; ?></td>
           <td nowrap>
             <a href="<?= site_url('buku/'.$row['id']) ?>" >Update</a>
           </td>
