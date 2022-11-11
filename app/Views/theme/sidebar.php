@@ -45,16 +45,32 @@
 
 <!-- Nav Item - Utilities Collapse Menu -->
 <li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-        aria-expanded="true" aria-controls="collapseUtilities">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseStok"
+        aria-expanded="true" aria-controls="collapseStok">
         <i class="fas fa-fw fa-wrench"></i>
         <span>Chart</span>
     </a>
-    <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+    <div id="collapseStok" class="collapse" aria-labelledby="headingUtilities"
         data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item" href="<?=site_url('chart/pie')?>">Pie</a>
-            <a class="collapse-item" href="<?=site_url('chart/pie')?>">Line</a>
+            <a class="collapse-item" href="<?=site_url('chart/line')?>">Line</a>
+        </div>
+    </div>
+</li>
+
+<!-- Nav Item - Utilities Collapse Menu -->
+<li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLaporan"
+        aria-expanded="true" aria-controls="collapseLaporan">
+        <i class="fas fa-fw fa-wrench"></i>
+        <span>Laporan</span>
+    </a>
+    <div id="collapseLaporan" class="collapse" aria-labelledby="headingUtilities"
+        data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="<?=site_url('chart/pie')?>">BUku</a>
+            <a class="collapse-item" href="<?=site_url('chart/line')?>">Peminjaman</a>
         </div>
     </div>
 </li>

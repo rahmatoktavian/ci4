@@ -6,7 +6,7 @@
 <a href="<?= site_url('buku/insert') ?>" class="btn btn-primary"><i class="fas fa-plus"></i> Insert</a>
 <br /><br />
 
-<table class="table table-striped" id="dataTable" width="100%" cellspacing="0">
+<table class="table table-striped" id="dataTable">
     <thead class="thead-dark">
       <tr>
         <th>No</th>
