@@ -35,7 +35,7 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->get('/', 'Auth::login');
 
 //param get & post
 $routes->get('/post_request', 'Form::post_request');
@@ -54,7 +54,7 @@ $routes->get('/kategori/delete/(:segment)', 'Kategori::delete/$1');
 //end crud single table
 
 //crud 1-Many table
-$routes->get('/buku', 'Buku::list');
+$routes->get('/buku', 'Buku::list', ['filter' => 'authGuard']);
 $routes->get('/buku/insert', 'Buku::insert');
 $routes->post('/buku/insert', 'Buku::insert_save');
 $routes->get('/buku/(:segment)', 'Buku::update/$1');
@@ -83,7 +83,14 @@ $routes->get('/buku_export_xls', 'BukuExport::export_xls');
 $routes->get('/buku_export_pdf', 'BukuExport::export_pdf');
 //end crud 1-Many table
 
+//chart
 $routes->get('/chart/pie', 'Chart::pie');
+
+//login & logout
+$routes->get('/login', 'Auth::login');
+$routes->post('/login', 'Auth::login_submit');
+$routes->get('/logout', 'Auth::logout');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

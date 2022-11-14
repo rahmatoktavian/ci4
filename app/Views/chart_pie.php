@@ -1,3 +1,6 @@
+<?= $this->extend('theme/index'); ?>
+<?= $this->section('content'); ?>
+
 <div id="chart"></div>
 
 
@@ -24,3 +27,5 @@
   var chart = new ApexCharts(document.querySelector("#chart"), options);
   chart.render();
 </script>
+
+<?= $this->endsection('content'); ?>
