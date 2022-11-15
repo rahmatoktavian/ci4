@@ -20,7 +20,7 @@
     </a>
 </li>
 
-<?php if(session()->get('username') == 'admin'):?>
+<?php if(session()->get('tipe') == 'admin'):?>
 <!-- Divider -->
 <hr class="sidebar-divider">
 
@@ -45,7 +45,7 @@
 </li>
 <?php endif?>
 
-<?php if(session()->get('username') == 'petugas'):?>
+<?php if(session()->get('tipe') == 'petugas'):?>
 <!-- Nav Item - Utilities Collapse Menu -->
 <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseStok"
