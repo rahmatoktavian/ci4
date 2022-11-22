@@ -20,7 +20,7 @@
     </a>
 </li>
 
-<?php if(session()->get('tipe') == 'administrator'):?>
+<?php if(session()->get('tipe') == 'admin'):?>
 <!-- Divider -->
 <hr class="sidebar-divider">
 
