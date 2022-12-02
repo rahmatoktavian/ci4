@@ -9,5 +9,4 @@ ALTER TABLE `peminjaman_buku`
   ADD KEY `peminjaman_id` (`peminjaman_id`),
   ADD KEY `buku_id` (`buku_id`);
 
-ALTER TABLE `peminjaman_buku`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+ALTER TABLE `peminjaman_buku` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
