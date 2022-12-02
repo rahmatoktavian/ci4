@@ -5,5 +5,5 @@ use CodeIgniter\Model;
 class PeminjamanModel extends Model
 {
     protected $table = 'peminjaman';
-    protected $allowedFields = ['nama', 'tanggal'];
+    protected $allowedFields = ['nama', 'tanggal', 'petugas_id'];
 }

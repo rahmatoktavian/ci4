@@ -37,13 +37,14 @@ class Auth extends BaseController
 
             //check username & password enkripsi terdaftar di database
             $encrypt_password = sha1($password);
-            $data = $this->UserModel->select('id, username, tipe')->where('username', $username)->where('password', $encrypt_password)->first();
+            $data = $this->UserModel->select('id, username, tipe, petugas_id')->where('username', $username)->where('password', $encrypt_password)->first();
             
             if ($data) {
                 //membuat session
                 session()->set([
                     'username' => $data['username'],
                     'tipe' => $data['tipe'],
+                    'petugas_id' => $data['petugas_id'],
                     'is_login' => TRUE
                 ]);
 

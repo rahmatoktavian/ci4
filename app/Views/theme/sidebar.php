@@ -46,6 +46,13 @@
 <?php endif?>
 
 <?php if(session()->get('tipe') == 'staff'):?>
+<li class="nav-item">
+    <a class="nav-link" href="<?=site_url('peminjaman');?>">
+        <i class="fas fa-fw fa-book"></i>
+        <span>Peminjaman</span>
+    </a>
+</li>
+
 <!-- Nav Item - Utilities Collapse Menu -->
 <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseStok"
@@ -66,7 +73,7 @@
 <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLaporan"
         aria-expanded="true" aria-controls="collapseLaporan">
-        <i class="fas fa-fw fa-wrench"></i>
+        <i class="fas fa-fw fa-file"></i>
         <span>Laporan</span>
     </a>
     <div id="collapseLaporan" class="collapse" aria-labelledby="headingUtilities"
