@@ -14,8 +14,10 @@ class Peminjaman extends BaseController
 
     public function list()
     {
-        //select data from table peminjaman
+        //session petugas id yg login
         $petugas_id = session()->get('petugas_id');
+
+        //select data from table peminjaman
         $list = $this->PeminjamanModel->select('id, nama, tanggal')->where('petugas_id', $petugas_id)->orderBy('tanggal')->findAll();
         
         $output = [
