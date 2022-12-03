@@ -13,7 +13,7 @@ ALTER TABLE `petugas`
 ALTER TABLE `petugas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
-ALTER TABLE `user `ADD petugas_id INT NULL AFTER tipe;
+ALTER TABLE `user` ADD petugas_id INT NULL AFTER tipe;
 ALTER TABLE `user` ADD  CONSTRAINT user_petugas_id FOREIGN KEY (petugas_id) REFERENCES petugas(id) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
 UPDATE user SET petugas_id = '1' WHERE user.id = 1;
