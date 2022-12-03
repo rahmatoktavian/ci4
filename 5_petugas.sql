@@ -1,5 +1,5 @@
 CREATE TABLE `petugas` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
   `nama` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -11,7 +11,7 @@ ALTER TABLE `petugas`
   ADD PRIMARY KEY (`id`);
 
 ALTER TABLE `petugas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 ALTER TABLE `user `ADD petugas_id INT NULL AFTER tipe;
 ALTER TABLE `user` ADD  CONSTRAINT user_petugas_id FOREIGN KEY (petugas_id) REFERENCES petugas(id) ON DELETE RESTRICT ON UPDATE RESTRICT;

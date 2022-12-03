@@ -1,5 +1,5 @@
 CREATE TABLE `peminjaman` (
-  `id` int(11) NOT NULL AUTO_INCREMENT
+  `id` int(11) NOT NULL,
   `nama` varchar(50) NOT NULL,
   `tanggal` date NOT NULL,
   `petugas_id` int(11) DEFAULT NULL
@@ -8,3 +8,6 @@ CREATE TABLE `peminjaman` (
 ALTER TABLE `peminjaman`
   ADD PRIMARY KEY (`id`),
   ADD KEY `peminjaman_petugas_id` (`petugas_id`);
+
+ALTER TABLE `peminjaman`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
