@@ -1,6 +1,3 @@
-SET FOREIGN_KEY_CHECKS = 0;
-DROP TABLE `peminjaman`;
-
 CREATE TABLE `peminjaman` (
   `id` int(11) NOT NULL,
   `nama` varchar(50) NOT NULL,
