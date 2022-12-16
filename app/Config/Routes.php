@@ -94,6 +94,10 @@ $routes->get('/login', 'Auth::login');
 $routes->post('/login', 'Auth::login_submit');
 $routes->get('/logout', 'Auth::logout');
 
+//api
+$routes->get('/api/request', 'API::request');
+$routes->post('/api/response', 'API::response');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
