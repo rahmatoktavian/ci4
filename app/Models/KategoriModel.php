@@ -4,6 +4,6 @@ use CodeIgniter\Model;
 
 class KategoriModel extends Model
 {
-    protected $table = 'kategori';
+    protected $table = 'kategori_buku';
     protected $allowedFields = ['nama'];
 }
